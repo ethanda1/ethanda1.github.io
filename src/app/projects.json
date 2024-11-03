@@ -1,0 +1,32 @@
+{
+      "kiwiNote": {
+        "title": "KiwiNote",
+        "description": "Developed an LLM powered note-taking web application that allows users to record audio, transcribe it, and generate notes.",
+        "technologies": ["Next.js", "Supabase", "Node.js", "Express.js","LangChain", "OpenAI GPT-4o","WhisperAPI", "Docker", "Tailwind"],
+        "link": "https://github.com/ethanda1/KiwiNote",
+        "demo": "https://ethanda1.github.io/KiwiNote/"
+
+      },
+      "rateMyUMNDorm": {
+        "title": "RateMyUMNDorm",
+        "description": "Developed a full-stack web application enabling students to review, rate, and explore dormitories at the University of Minnesota.",
+        "technologies": ["Python", "Flask", "PostgreSQL", "Tailwind"],
+        "link": "https://github.com/ethanda1/rateumndorms",
+        "demo": "https://umndorms-427250c1fc5f.herokuapp.com"
+
+      },
+      "tuneSwipe": {
+        "title": "TuneSwipe",
+        "description": "Developed a music discovery web application inspired by Tinder, allowing users to swipe through songs and personalize their song feed.",
+        "technologies": ["React", "Express.js", "Node.js","OpenAI GPT-4o", "Spotify API", "Tailwind"],
+        "link": "https://github.com/ethanda1/tuneswipe"
+
+      },
+      "spotimix": {
+        "title": "SpotiMix",
+        "description": "Developed a web application to recommend and display personalized music tracks using the Spotify API.",
+        "technologies": ["Python","Flask", "HTML", "CSS","OpenAI GPT-4o", "Spotify API", "Tailwind"],
+        "link": "https://github.com/ethanda1/tuneswipe"
+      }
+      
+    }
