@@ -16,6 +16,12 @@ export default function Navbar() {
         </div>
         <div
           className="font-light text-lg text-emerald-700 border-b-2 border-transparent hover:border-emerald-700 transition-[border-color] ease-in-out duration-300 px-3 cursor-pointer"
+          onClick={() => router.push("/about")}
+        >
+          About
+        </div>
+        <div
+          className="font-light text-lg text-emerald-700 border-b-2 border-transparent hover:border-emerald-700 transition-[border-color] ease-in-out duration-300 px-3 cursor-pointer"
           onClick={() => router.push("/experience")}
         >
           Experience
