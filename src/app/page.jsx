@@ -45,7 +45,7 @@ export default function Home() {
             I'm fascinated by large-scale, high-impact products as well as apps that have 100M+ installs.
 
 
-          <div className="flex items-center gap-3 bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-2 px-4 border border-emerald-500 hover:border-transparent rounded w-full max-w-40 select-none" onClick={() => router.push('mailto:ethanydai@gmail.com')}>
+          <div className="flex items-center gap-3 bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-2 px-4 border border-emerald-500 hover:border-transparent rounded w-full max-w-40 select-none" onClick={() => router.push('mailto:ethanydai462@gmail.com')}>
             <FaEnvelope size= '30'/>Contact Me
           </div>
           </div>
