@@ -37,7 +37,7 @@ const AboutMe = () => {
   };
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Navbar />
       <div className="min-h-screen bg-gradient-to-br from-[#E1F8DC] to-[#ACDDDE] p-4">
         <div className="text-3xl font-medium pt-8 pb-4 flex justify-center text-emerald-700">
@@ -65,7 +65,7 @@ const AboutMe = () => {
           ))}
         </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 

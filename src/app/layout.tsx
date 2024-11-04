@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased bg-gradient-to-br from-[#E1F8DC] to-[#ACDDDE] overflow-hidden`}>
+      <body className={` antialiased bg-gradient-to-br from-[#E1F8DC] to-[#ACDDDE]`}>
 
         {children}
       </body>

@@ -10,7 +10,7 @@ export default function Home() {
   const router = useRouter();
   
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Navbar />
       <div className="min-h-screen flex items-center justify-center overflow-hidden">
         <div className="flex flex-col w-full max-w-5xl items-center mb-40">

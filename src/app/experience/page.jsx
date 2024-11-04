@@ -45,7 +45,7 @@ const ExperienceBoard = ({ desc, company, title, dates }) => {
 // Experience page
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Navbar />
       <div className="min-h-screen bg-gradient-to-br from-[#E1F8DC] to-[#ACDDDE]">
         <div className="text-2xl font-light pt-5 flex justify-center text-emerald-700">
@@ -67,6 +67,6 @@ export default function Home() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
