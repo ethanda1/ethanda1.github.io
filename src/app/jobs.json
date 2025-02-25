@@ -1,8 +1,16 @@
 {
-    
-    "company": "Thaddeus Resource Center",
-    "job_title": "Software Developer Intern",
-    "description": "At my internship at Thaddeus, I was working with other interns in developing a mobile application for the company. I mainly worked on frontend development, utilizing React Native and Typescript, but also optimization through creating Node/Express API's, and transferring client-side storage to a PostgreSQL backend.",
-    "logo": "/thaddeus.jpg",
-    "dates": "Sep 2024 - Present"
+  "jobs": [
+    {
+      "company": "Soaper LLC",
+      "job_title": "Software Engineer Intern",
+      "dates": "Dec 2024 - Present",
+      "description": "Developed and integrated LLM-powered solutions within Electronic Medical Record (EMR) applications to enhance physician workflows. Implemented billing systems and created natural language interfaces for healthcare documentation."
+    },
+    {
+      "company": "Thaddeus Resource Center",
+      "job_title": "Software Developer Intern",
+      "description": "At my internship at Thaddeus, I was working with other interns in developing a mobile application for the company. I mainly worked on frontend development, utilizing React Native and Typescript, but also optimization through creating Node/Express API's.",
+      "dates": "Sep 2024 - Jan 2025"
+    }
+  ]
 }

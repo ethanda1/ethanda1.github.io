@@ -20,44 +20,48 @@ const ProjectBoard = ({ company, desc, link, techs, demo }) => {
       initial="hidden"
       animate="visible"
       variants={variants}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="flex flex-row h-20 w-full max-w-5xl mt-5 p-4 rounded-lg shadow-lg bg-[#CAF1DE]">
-        <div className="flex justify-between w-full items-center">
-          <div className="flex flex-row items-center">
-            <h1 className="text-2xl font-light text-emerald-700">{company}</h1>
-            <div className="ml-3">
-              {techs.map((tech, index) => (
-                <div
-                  key={index}
-                  className="inline-block bg-emerald-200 shadow-lg rounded-md px-2 py-1 text-sm text-emerald-700 font-light mr-1"
+      <div className="flex flex-row h-auto w-full max-w-5xl mt-5 p-6 rounded-xl shadow-lg bg-[#CAF1DE] hover:shadow-xl transition-all duration-300 hover:scale-[1.01]">
+        <div className="flex flex-col w-full">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            <div className="flex flex-col md:flex-row md:items-center gap-4">
+              <h1 className="text-2xl font-medium text-emerald-700">{company}</h1>
+              <div className="flex flex-wrap gap-2">
+                {techs.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="bg-emerald-200/70 backdrop-blur-sm shadow-sm rounded-full px-3 py-1 text-sm text-emerald-800 font-medium"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex gap-3 mt-4 md:mt-0">
+              {demo && (
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-2 rounded-full bg-emerald-600 hover:bg-emerald-700 transition-colors cursor-pointer"
+                  onClick={() => router.push(demo)}
                 >
-                  {tech}
-                </div>
-              ))}
+                  <FaExternalLinkAlt size="24" className="text-white" />
+                </motion.div>
+              )}
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-2 rounded-full bg-gray-800 hover:bg-gray-900 transition-colors cursor-pointer"
+                onClick={() => router.push(link)}
+              >
+                <FaGithub size="24" className="text-white" />
+              </motion.div>
             </div>
           </div>
-          <div className="flex flex-row gap-3">
-            {company !== "TuneSwipe" && company !== "SpotiMix" ? (
-              <FaExternalLinkAlt 
-                size="30" 
-                className="text-emerald-700 hover:text-emerald-600 cursor-pointer transition-colors"
-                onClick={() => router.push(demo)}
-              />
-            ) : null}
-
-            <FaGithub
-              size="30"
-              onClick={() => router.push(link)}
-              className="text-emerald-700 hover:text-emerald-600 cursor-pointer transition-colors"
-            />
+          <div className="text-emerald-700 font-light leading-relaxed">
+            {desc}
           </div>
-        </div>
-      </div>
-      <div className="flex flex-row mt-5 w-full max-w-4xl items-center gap-5">
-        <div className="h-20 border border-emerald-500"></div>
-        <div className="text-emerald-700 max-w-4xl rounded-lg shadow-md font-light p-4 bg-[#CAF1DE] hover:bg-[#CAF1DE]/90 transition-colors">
-          {desc}
         </div>
       </div>
     </motion.div>
@@ -69,17 +73,28 @@ export default function Projects() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-[#E1F8DC] to-[#ACDDDE]">
-        <div className="text-2xl font-light pt-5 flex justify-center text-emerald-700">
+      <div className="min-h-screen bg-gradient-to-br from-[#E1F8DC] to-[#ACDDDE] px-4 pb-12">
+        <div className="text-3xl font-medium pt-8 pb-6 flex justify-center text-emerald-700">
           <TypeAnimation
             sequence={['/projects', 2000]}
             wrapper="span"
             speed={1}
-            className="text-2xl inline-block"
+            className="inline-block"
             repeat={Infinity}
           />
         </div>
-        <div className="flex flex-col justify-center">
+        <motion.div 
+          className="flex flex-col items-center max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ProjectBoard
+            company={projects.photoTag.title}
+            desc={projects.photoTag.description}
+            link={projects.photoTag.link}
+            techs={projects.photoTag.technologies}
+          />
           <ProjectBoard
             company={projects.kiwiNote.title}
             desc={projects.kiwiNote.description}
@@ -106,7 +121,7 @@ export default function Projects() {
             link={projects.spotimix.link}
             techs={projects.spotimix.technologies}
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );
